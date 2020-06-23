@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>小專題</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		 <link rel="stylesheet" href="js/plugin/vegas/vegas.min.css">
+		<link rel="stylesheet" href="js/plugin/jquery-ui/jquery-ui.css">
+  		
+ 
+		 
+	</head>
+
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		
+		}
+	.wrap{
+		height:400vh;
+		width:100%;
+		}
+	.header{
+		width:100%;
+		height:100vh;
+		opacity:.8;
+		}
+	.nav{
+		width:100%;
+		height:5em;
+		background:#26292E;
+		opacity:.9;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		z-index: 9999;
+		
+		}
+
+	.fixed{
+	    position: fixed;
+	    top:0;
+	    right:0;
+	    left:0;
+	   }
+
+	#content{
+		width:100%;
+		height:60em;
+		background:rgba(0,0,0,.8);
+		display:flex;
+	}
+	.content-pic{
+		width:100%;
+		height:900px;
+		
+
+		margin:100px auto;
+		overflow:hidden;
+
+		
+
+		
+	}
+	figure{
+		float:left;
+		text-align: center;
+	}
+	img{
+		width:21%;
+		margin:30px;
+	}
+	.zoomLens:hover{
+		cursor:zoom-in !important ;
+		
+	}
+	#content2{
+		width:100%;
+		height:50em;
+		background:black;
+		}
+	.content2_box{
+		width:80%;
+		margin:0 auto;
+		padding:80px;
+	}
+	#menu{
+		background:#3C3F45;
+		color:#fff;
+		margin:10px 0 0 0;
+		margin-bottom:5px;
+		padding:25px;
+		border:0;
+		}
+	#menu_inside{
+		background:#26292E;
+		color:#fff;
+		height:300px;
+	}
+	#menu:hover{
+		background:rgba(255,0,0,.8);
+		
+		}
+
+	
+	#content3{
+		width:100%;
+		height:42%;
+		background:black;
+		padding-top:50px;
+		}
+	#content3 h2{
+		padding:40px;
+	}
+	#content3 h3{
+		color:#fff;
+		text-align:center;
+		margin:20px;
+
+	}
+	.content3_big{
+		width:100%;
+		height:37%;
+		display:flex;
+		justify-content: center;
+	}
+	.content3_big2{
+		width:100%;
+		height:33%;
+		display:flex;
+		margin:0 auto;
+	}
+	.content3_big2_left_pic img{
+		width:100%;
+	}
+	.content3_big2_right_pic img{
+		width:40%;
+	}
+	.content3_big2_left_pic{
+		width:50%;
+		margin:20px;
+	}
+	.content3_big2_right_pic{
+		width:50%;
+		height:300px;
+		margin:20px;
+	}
+	.content3_left_pic{
+		width:50%;
+		height:300px;
+		margin:20px;
+	}
+	.content3_right_pic{
+		width:50%;
+		height:300px;
+		margin:20px;
+	}
+
+	.content3_left_pic img{
+		width:100%;
+	}
+	.content3_right_pic img{
+		width:40%;
+	}
+	#content3 h4{
+		margin:25px;
+		color:#fff;
+	}
+
+
+	#footer{
+		width:100%;
+		height:400px;
+		background:rgba(0,0,0,.8);
+	}
+	h2{
+		font-size:30px;
+		color:#fff;
+		text-align:center;
+		margin:0;
+	}
+	.content-pic h2{
+		font-size:30px;
+		padding:20px;
+	}
+	ul{
+		margin:0 auto;
+		
+	}
+	ul li a{
+		margin:60px;
+		font-size:30px;
+		color:#fff;
+
+	}
+/***********************手機板*******************************/
+		@media screen and (min-width:1024px){
+		.wrap{
+			width:960px;
+
+			}
+		#content3{
+			width:960px;
+		}	
+
+		}
+		@media screen and (max-width: 2000px){
+		.wrap{
+			width:100%;
+		}
+		#content3{
+			width:100%;
+		}	
+		}
+		@media screen and (min-width: 930px) and (max-width:1099px){
+			#content3{
+				height: 62em;
+			}
+			ul li a{
+				font-size: 1.5em;
+			}
+		}
+		@media screen and (min-width: 675px) and (max-width:929px){
+			ul li a{
+				font-size: 1.2em;
+				margin: 2em;
+			}
+		}
+		@media screen and (min-width: 500px) and (max-width:674px){
+			ul li a{
+				font-size: 1em;
+				margin: 1.5em;
+			}
+			#content{
+				height: 48em;
+			}
+			#content3{
+				height: 25%;
+			}
+			.content3_big{
+				height: 30%;
+			}
+			#content3 h4{
+				font-size: 1em;
+			}
+			.content3_left_pic img, .content3_big2_left_pic img{
+				margin: 5em 1em 0 1em;
+			}
+			.content3_right_pic img, .content3_big2_right_pic img{
+				margin: 5em 2em 0 2em;
+			}
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="header"></div>
+			<div class="nav">
+				<ul class="nav justify-content"> 
+				  <li>
+				    <a class="nav-link" href="#">關於</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#content">照片</a> 
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#content2">菜單</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#content3">品牌連結</a>
+				  </li>
+				</ul>
+			</div>
+			<div id="content">
+				<div class="content-pic">
+					<h2>特選料理</h2>
+					<figure>
+						<img src="images/image-01-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/image-02-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/image-03-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/image-04-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/image-05-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/image-06-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/image-08-full.jpg" alt=""><a href=""></a></img>
+						<img src="images/pic14.jpg" alt=""><a href=""></a></img>
+					</figure>
+				</div>
+				
+			</div>
+		<div id="content2">       
+			<div class="content2_box">
+			  <h3 id="menu">究極菜品</h3>
+			  <div id="menu_inside">
+			    <ol>厚切牛舌(限量品)</ol>
+			    <ol>夢幻牛小排</ol>
+			    <ol>松露牛小排</ol>
+			    <ol>一級鴨肝牛小排</ol>
+			    <ol>帝王胭脂蝦(限量品)</ol>
+			    <ol>巨無霸生蠔(限量品)</ol>
+			    <ol>巨石蟹腳(限量品)</ol>
+			  </div>
+			  <h3 id="menu">冷菜</h3>
+			  <div id="menu_inside">
+			    <ol>龍蝦沙拉捲</ol>
+			    <ol>胡麻豆腐沙拉</ol>
+			    <ol>鮭魚卵干貝</ol>
+			    <ol>辣拌冰捲</ol>
+			    <ol>辣味冷拌牛肉</ol>
+			  </div>
+			  <h3 id="menu">串燒類</h3>
+			  <div id="menu_inside">
+			    <h4>牛</h4>
+				    <ol>蔥蔥牛</ol>
+				    <ol>水蓮牛肉捲</ol>
+				    <ol>和牛牛小排</ol>
+				    <ol>醬燒牛肋條(美國)</ol>
+				    <ol>牛筋串燒</ol>
+			    <h4>豚</h4>
+				    <ol>松阪豬</ol>
+				    <ol>豬五花</ol>
+				    <ol>大腸頭</ol>
+				    <ol>蔥蔥豬</ol>
+				<h4>雞</h4>
+					<ol>蔥蔥雞腿肉</ol>
+					<ol>鮮嫩雞腿肉</ol>
+					<ol>地雞頸肉</ol>
+					<ol>雞膝軟骨</ol>
+					<ol>雞菲力</ol>
+					<ol>雞肉丸子</ol>
+					<ol>鹽烤雞翅</ol>
+			</div>
+			  <h3 id="menu">野菜</h3>
+			  <div id="menu_inside">
+			    <ol>茭白筍</ol>
+			    <ol>雞汁娃娃菜</ol>
+			    <ol>水果玉米</ol>
+			    <ol>杏鮑菇</ol>
+			    <ol>帶葉玉米筍</ol>
+			    <ol>日本山藥</ol>
+			  </div>
+			   <h3 id="menu">海鮮</h3>
+			  <div id="menu_inside">
+			    <ol>巨無霸干貝堡</ol>
+			    <ol>明太子柳葉魚</ol>
+			    <ol>烤軟絲脆骨</ol>
+			    <ol>鹽烤軟絲</ol>
+			    <ol>午魚一夜干</ol>
+			    <ol>秋刀魚一夜干</ol>
+			    <ol>鹽烤鮪魚琵琶肉</ol>
+			   </div>
+			  <h3 id="menu">炸物</h3>
+			  <div id="menu_inside">
+			    <ol>海鮮蔬菜餅</ol>
+			    <ol>鮭魚親子串</ol>
+			    <ol>酥炸廣島牡蠣</ol>
+			    <ol>酥炸脆雞皮</ol>
+			    <ol>起司竹輪</ol>
+			    <ol>酥炸綜合雞軟骨</ol>
+			    <ol>牛蒡天婦羅</ol>
+			    <ol>手打大花枝丸</ol>
+			    <ol>香酥花蟹</ol>
+			  </div>
+			   <h3 id="menu">料理</h3>
+			  <div id="menu_inside">
+			    <ol>明太子小卷</ol>
+			    <ol>季節炒野菜</ol>
+			    <ol>蒜香奶油花蟹</ol>
+			    <ol>雞肉炒茭白筍</ol>
+			  </div>
+			   <h3 id="menu">主食</h3>
+			  <div id="menu_inside">
+			    <ol>醬燒野豬丼</ol>
+			    <ol>明太子茶泡飯</ol>
+			    <ol>鮭魚茶泡飯</ol>
+			    <ol>鮭魚烤飯糰</ol>
+			    <ol>日式炒拉麵</ol>
+			  </div>
+			   <h3 id="menu">湯品甜點</h3>
+			  <div id="menu_inside">
+			    <ol>蛤蜊味噌湯</ol>
+			    <ol>芝麻手工霜派</ol>
+			    <ol>花生手工霜派</ol>
+			  </div>
+			   <h3 id="menu">酒類</h3>
+			  <div id="menu_inside">
+			    <ol>啤酒</ol>
+			    <ol>生啤</ol>
+			    <ol>清酒</ol>
+			    <ol>燒酒</ol>
+			  </div>
+			</div>
+		</div>
+ 
+ 
+
+			<div id="content3">
+				<h2>品牌連結</h2>
+				<h3>將美味點對點的串連起來，提供更多樣化的美食體驗</h3>
+				<div class="content3_big">
+					<div class="content3_left_pic"><img src="images/Hitogrill.jpg" alt=""></div>
+					 <div class="content3_right_pic"> <img src="images/logo-hitogrill.jpg" alt="">
+						<h4>品牌介紹 : <br/>
+特選食材燒肉居酒屋，吧檯式服務就算一人也可以吃得過癮，以炭火燒烤出最優質的燒肉，提供無煙、熱情的日式燒肉用餐氣氛。</h4>
+					 </div>
+				</div>
+				<div class="content3_big2">
+					<div class="content3_big2_left_pic"><img src="images/Bao.jpg" alt=""></div>
+					 <div class="content3_big2_right_pic"> <img src="images/logo-bao.jpg" alt="">
+						<h4>品牌介紹 : <br/>
+【稍飽】在稍為炙烤到香Ｑ的軟法麵包上，豪邁的鋪上絕不妥協的厚片燒肉，層層堆疊出的烤肉好滋味，正統日式烤燒肉搭配上鬆軟脆口的麵包，十分滿足！。</h4>
+					 </div>
+				</div>
+				
+        	
+		
+            
+        </div>
+        <div id="footer">
+				<h2>footer</h2>
+		<div id="map" style="width: 300px; height: 300px;"></div>
+			</div>
+		
+			</div>
+			
+		
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="js/plugin/jquery-ui/jquery-ui.js"></script>
+<script src="js/plugin/vegas/vegas.min.js"></script>
+<script src="js/plugin/jquery.elevatezoom.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQA8ERHCd7D6Bl984z3fnyUYDAZTrMnUY"></script>
+<script src="js/plugin/jquery.googlemap.js"></script>
+
+
+  <script>
+  	$(".header").vegas({
+  		timer: false,
+    slides: [
+        { src: "images/bg1.jpg" },
+        { src: "images/bg6.jpg" },
+        { src: "images/bg3.jpg" },
+        { src: "images/bg2.jpg" },
+        { src: "images/bg4.jpg" }
+	    ]
+	});
+  	var navTop=$(".nav").offset().top;
+    console.log(navTop);
+
+    $(window).scroll(function() {
+      var scrollNow=$(this).scrollTop();
+      if(scrollNow>=navTop){
+        $(".nav").addClass('fixed');
+      }else{
+        $(".nav").removeClass('fixed');
+      }
+      console.log(scrollNow);
+    });
+    $( function() {
+    	$("#content img").elevateZoom();
+    $( ".content2_box" ).accordion({
+      collapsible: true,
+      active: false,
+	heightStyle: "fill", 
+	active: "index"
+	    });
+	  } );
+  //    $(function() {
+  //   $("#map").googleMap({
+  //     zoom: 15, // Initial zoom level (optional)
+  //     coords: [25.142683, 121.569618], // Map center (optional)
+  //     type: "ROADMAP" // Map type (optional)
+  //   });
+  // })
+
+    $(function() {
+    $("#map").googleMap();
+    $("#map").addMarker({
+      coords:  [25.142683, 121.569618], // GPS coords
+      title: '居酒屋', // Title
+      text:  '居酒屋' // HTML content
+    });
+  })
+    
+  	
+  </script>
+	</body>
+	</html>	
